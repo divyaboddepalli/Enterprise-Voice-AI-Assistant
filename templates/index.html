@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Enterprise Voice Assistant</title>
+  <link rel="stylesheet" href="/static/style.css"/>
+</head>
+<body>
+
+<header class="top-header">
+    <div class="container center">
+      <h1>Enterprise Voice AI</h1>
+      <p class="brand-subtitle">Voice-enabled assistant for HR & IT support</p>
+    </div>
+</header>
+
+<main class="container main-grid">
+  <aside class="card services">
+    <h3>Available Services</h3>
+    <ul>
+      <li>🔐 Password Reset</li>
+      <li>📅 Leave Balance</li>
+      <li>📘 IT & HR Policies</li>
+      <li>🏢 Meeting Room Booking</li>
+      <li>📡 Wi-Fi Support</li>
+      <li>📧 Email Activation</li>
+      <li>🆔 ID Card Request</li>
+      <li>💰 Salary Slip</li>
+      <li>🛠 IT Helpdesk Ticket</li>
+      <li>🎉 Holiday List</li>
+      <li>⏱ Attendance Status</li>
+      <li>🍽 Cafeteria Menu</li>
+      <li>🧳 Travel Request</li>
+      <li>💻 Asset Request</li>
+      <li>🏠 Work From Home Request</li>
+    </ul>
+  </aside>
+
+  <section class="card assistant">
+    <div class="controls">
+      <button id="micBtn" class="btn primary">Start Listening 🎤</button>
+      <button id="stopBtn" class="btn">Stop</button>
+      <button id="resetBtn" class="btn">Reset</button>
+      <button id="logoutBtn" class="btn danger">Logout</button>
+    </div>
+
+    <div class="boxes">
+      <div>
+        <h4>Your speech</h4>
+        <textarea id="userText" readonly placeholder="Spoken text will appear here..."></textarea>
+      </div>
+
+      <div>
+        <h4>Agent reply</h4>
+        <textarea id="botText" readonly placeholder="Agent response will appear here..."></textarea>
+      </div>
+    </div>
+
+    <div class="email-row">
+      <label>Your employee email:</label>
+      <input id="emailField" type="email" value="{{ session.get('user_email','') }}">
+    </div>
+
+    <p class="hint">Try: "What is my leave balance?", "Reset my password", "Book a meeting room", "Show IT policy".</p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-text">
+    © <span class="year">2025</span> • Enterprise Voice AI • Built by Divya Boddepalli
+  </div>
+</footer>
+
+<script src="/static/script.js"></script>
+</body>
+</html>

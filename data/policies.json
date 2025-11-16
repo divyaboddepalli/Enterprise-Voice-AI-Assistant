@@ -1,0 +1,12 @@
+{
+  "policies": {
+    "leaves": "10 Casual, 6 Sick, 12 Privilege Leaves annually.",
+"it-policies": "Use strong passwords & follow cybersecurity rules.",
+"security": "Wear ID cards; report lost IDs to admin.",
+"work_from_home": "WFH allowed with manager approval.",
+"code_of_conduct": "Maintain respectful behaviour.",
+"attendance": "Mark attendance before 10 AM.",
+"data_privacy": "Do not share company confidential data."
+
+  }
+}

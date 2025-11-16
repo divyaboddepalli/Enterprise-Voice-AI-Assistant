@@ -1,0 +1,103 @@
+{
+    "employees": {
+        "admin@example.com": {
+            "name": "Admin User",
+            "employee_id": "EMP1000",
+            "leave_balance": {
+                "casual": 6,
+                "sick": 1,
+                "earned": 4
+            },
+            "email_active": true,
+            "attendance_status": "Present"
+        },
+        "divya@example.com": {
+            "name": "Boddepalli Divya",
+            "employee_id": "EMP1001",
+            "leave_balance": {
+                "casual": 6,
+                "sick": 2,
+                "earned": 4
+            },
+            "email_active": true,
+            "attendance_status": "Present"
+        },
+        "adi@gmail.com": {
+            "name": "Boddepalli adinarayana",
+            "employee_id": "EMP1002",
+            "leave_balance": {
+                "casual": 6,
+                "sick": 2,
+                "earned": 4
+            },
+            "email_active": true,
+            "attendance_status": "Present"
+        },
+        "hari@gmail.com": {
+            "name": "Boddepalli adinarayana",
+            "employee_id": "EMP1002",
+            "leave_balance": {
+                "casual": 6,
+                "sick": 2,
+                "earned": 4
+            },
+            "email_active": true,
+            "attendance_status": "Present"
+        },
+        "divya@gmail.com": {
+            "name": "Divya Boddepalli",
+            "employee_id": "EMP001003",
+            "leave_balance": {
+                "casual": 6,
+                "sick": 2,
+                "earned": 4
+            },
+            "email_active": true,
+            "attendance_status": "Present"
+        },
+        "divyafour@gmail.com": {
+            "name": "Boddepalli adinarayana",
+            "employee_id": "EMP001004",
+            "leave_balance": {
+                "casual": 6,
+                "sick": 2,
+                "earned": 4
+            },
+            "email_active": true,
+            "attendance_status": "Present"
+        },
+        "bhanu@gamil.com": {
+            "name": "Boddepalli Bhanu",
+            "employee_id": "EMP001234",
+            "leave_balance": {
+                "casual": 6,
+                "sick": 2,
+                "earned": 4
+            },
+            "email_active": true,
+            "attendance_status": "Present"
+        },
+        "divyatwo@gmail.com": {
+            "name": "Boddepalli adinarayana",
+            "employee_id": "EMP000123",
+            "leave_balance": {
+                "casual": 6,
+                "sick": 2,
+                "earned": 4
+            },
+            "email_active": true,
+            "attendance_status": "Present"
+        },
+        "bhanu@gmail.com": {
+            "name": "Boddepalli Bhanu",
+            "employee_id": "EMP008765",
+            "leave_balance": {
+                "casual": 6,
+                "sick": 2,
+                "earned": 4
+            },
+            "email_active": true,
+            "attendance_status": "Present"
+        }
+    }
+}

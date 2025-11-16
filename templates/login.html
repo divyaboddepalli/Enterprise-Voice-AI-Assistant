@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Login — Enterprise Voice AI</title>
+  <link rel="stylesheet" href="/static/style.css"/>
+</head>
+<body class="auth-body">
+
+<header class="top-header">
+    <div class="container center">
+      <h1>Enterprise Voice AI</h1>
+      <p class="brand-subtitle">Login to continue</p>
+    </div>
+</header>
+
+<div class="auth-card container">
+    <h2>Welcome back</h2>
+
+    <input id="email" type="email" placeholder="Email" />
+    <input id="password" type="password" placeholder="Password" />
+
+    <button id="loginBtn" class="primary full">Login</button>
+
+    <p class="small">
+        New user? <a href="/register">Register here</a>
+    </p>
+
+    <p id="loginMsg" class="error"></p>
+</div>
+
+<footer class="site-footer">
+  <div class="container footer-text">
+    © <span class="year">2025</span> • Enterprise Voice AI • Built by Divya Boddepalli
+  </div>
+</footer>
+
+<script>
+document.getElementById("loginBtn").addEventListener("click", async () => {
+    const email = document.getElementById("email").value.trim().toLowerCase();
+    const password = document.getElementById("password").value;
+    document.getElementById("loginMsg").innerText = "";
+
+    const res = await fetch("/login", {
+        method: "POST",
+        headers: {"Content-Type":"application/json"},
+        body: JSON.stringify({email, password})
+    });
+    const out = await res.json();
+    if (out.status === "success") {
+        window.location.href = "/";
+    } else {
+        document.getElementById("loginMsg").innerText = out.message || "Login failed.";
+    }
+});
+</script>
+</body>
+</html>

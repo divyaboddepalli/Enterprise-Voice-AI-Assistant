@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Register — Enterprise Voice AI</title>
+  <link rel="stylesheet" href="/static/style.css"/>
+</head>
+<body class="auth-body">
+
+<header class="top-header">
+    <div class="container center">
+      <h1>Enterprise Voice AI</h1>
+      <p class="brand-subtitle">Register to access the Voice Assistant</p>
+    </div>
+</header>
+
+<main class="container">
+  <div class="auth-card">
+    <h2>Create an account</h2>
+
+        <input id="employeeId" placeholder="Employee Id (e.g. 123->EMP123)" type="text"/>
+
+    <input id="name" placeholder="Full name" type="text"/>
+    <input id="email" placeholder="Email" type="email"/>
+    <input id="password" placeholder="Password" type="password"/>
+    <div id="pwHint" class="small"></div>
+
+    <button id="regBtn" class="primary full">Register & Open Assistant</button>
+
+    <p class="small">Already have account? <a href="/login">Login</a></p>
+    <p id="regMsg" class="error"></p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-text">
+    © <span class="year">2025</span> • Enterprise Voice AI • Built by Divya Boddepalli
+  </div>
+</footer>
+
+<script>
+const pwField = document.getElementById("password");
+const pwHint = document.getElementById("pwHint");
+pwField?.addEventListener("input", () => {
+  const pw = pwField.value;
+  const checks = [];
+  if (pw.length < 8) checks.push("min 8 characters");
+  if (!/[A-Z]/.test(pw)) checks.push("uppercase");
+  if (!/[a-z]/.test(pw)) checks.push("lowercase");
+  if (!/[0-9]/.test(pw)) checks.push("number");
+  if (!/[!@#$%^&*(),.?\":{}|<>_\-\\\/\[\]]/.test(pw)) checks.push("special char");
+  pwHint.innerText = checks.length ? "Password needs: " + checks.join(", ") : "Password looks strong.";
+});
+
+document.getElementById("regBtn").addEventListener("click", async () => {
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim().toLowerCase();
+  const password = document.getElementById("password").value;
+  const employee_id = document.getElementById("employeeId").value.trim();
+
+  const res = await fetch("/register", {
+    method: "POST",
+    headers: {"Content-Type":"application/json"},
+    body: JSON.stringify({name, email, password, employee_id})
+  });
+  const out = await res.json();
+  document.getElementById("regMsg").innerText = out.message || "";
+  if (out.status === "success") {
+    // show assigned emp id briefly then redirect
+    alert("Registered successfully. Your Employee ID: " + (out.employee_id || "Assigned by system"));
+    window.location.href = "/";
+  }
+});
+</script>
+</body>
+</html>

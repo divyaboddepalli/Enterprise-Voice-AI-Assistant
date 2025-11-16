@@ -1,0 +1,49 @@
+{
+    "users": {
+        "admin@example.com": {
+            "name": "Admin User",
+            "password": "admin123",
+            "employee_id": "EMP1000"
+        },
+        "divya@example.com": {
+            "name": "Boddepalli Divya",
+            "password": "admin123",
+            "employee_id": "EMP1001"
+        },
+        "adi@gmail.com": {
+            "name": "Boddepalli adinarayana",
+            "password": "adi1234",
+            "employee_id": "EMP1002"
+        },
+        "hari@gmail.com": {
+            "name": "Boddepalli adinarayana",
+            "password": "adi1234",
+            "employee_id": "EMP1002"
+        },
+        "divya@gmail.com": {
+            "name": "Divya Boddepalli",
+            "password": "Divya@1234",
+            "employee_id": "EMP001003"
+        },
+        "divyafour@gmail.com": {
+            "name": "Boddepalli adinarayana",
+            "password": "Divya@7544",
+            "employee_id": "EMP001004"
+        },
+        "bhanu@gamil.com": {
+            "name": "Boddepalli Bhanu",
+            "password": "Bhanu@7544",
+            "employee_id": "EMP001234"
+        },
+        "divyatwo@gmail.com": {
+            "name": "Boddepalli adinarayana",
+            "password": "Bhanu@1234",
+            "employee_id": "EMP000123"
+        },
+        "bhanu@gmail.com": {
+            "name": "Boddepalli Bhanu",
+            "password": "Bhanu@1234",
+            "employee_id": "EMP008765"
+        }
+    }
+}
